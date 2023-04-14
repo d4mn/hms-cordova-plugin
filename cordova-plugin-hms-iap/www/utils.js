@@ -18,10 +18,9 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.asyncExec = void 0;
 
-const cordova_1 = require("cordova");
 function asyncExec(clazz, reference, args = []) {
     return new Promise((resolve, reject) => {
-        (0, cordova_1.exec)(resolve, reject, clazz, reference, args);
+        (0, window.cordova.exec)(resolve, reject, clazz, reference, args);
     });
 }
 exports.asyncExec = asyncExec;
